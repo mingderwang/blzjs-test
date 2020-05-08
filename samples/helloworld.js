@@ -11,12 +11,13 @@ const main = async () => { bz = await bluzelle({
      }); 
      try
      {
-//          res = await bz.create("test", "awesome", gas_params);
-//           console.log(typeof res != 'undefined' ? res : "success");
-          res = await bz.read("test", false);
+          res = await bz.create("test1", "awesome", gas_params);
+          console.log(typeof res != 'undefined' ? res : "success");
+          res = await bz.read("test1", false);
           console.log(typeof res != 'undefined' ? res : "success");
      } catch(e)
      {
+          console.log(e)
           console.error(e.message);
      }};
 main();
